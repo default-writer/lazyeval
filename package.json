@@ -1,0 +1,29 @@
+{
+  "name": "lazyeval",
+  "version": "1.0.0",
+  "description": "Minimal DI framework",
+  "main": "lazyeval.js",
+  "dependencies": {
+    "eslint": "^5.2.0",
+    "jshint": "^2.9.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hack2root/lazyeval.git"
+  },
+  "keywords": [
+    "javascript",
+    "lazy",
+    "evaluation"
+  ],
+  "author": "Artur Mustafin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hack2root/lazyeval/issues"
+  },
+  "homepage": "https://github.com/hack2root/lazyeval#readme"
+}
