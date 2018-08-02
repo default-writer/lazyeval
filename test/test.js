@@ -21,7 +21,7 @@ describe('let func = lazy((func) => c = func.a + func.b)', function () {
     let c;
 
     // 2. ACT
-    let func = lazy((func) => c = func.a + func.b);
+    let func = lazy((f) => c = f.a + f.b);
     func.a = a;
     func.b = b;
 
