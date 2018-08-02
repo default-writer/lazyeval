@@ -12,7 +12,7 @@ let lazy = (eval) => ((data) => new Proxy(data, {
 var expect = require('chai').expect;
 var lazy = require('../lazyeval');
 
-describe('let func = lazy((func) => c = func.a + func.b)', function () {
+describe('let func = lazy((f) => c = f.a + f.b)', function () {
   it('should add two numbers', function () {
 
     // 1. ARRANGE
@@ -84,6 +84,29 @@ describe('let func = lazy(() => c = a + func.c)', function () {
       }
     })
     func.c = 2;
+
+    // 3. ASSERT
+    expect(c).to.be.equal(3);
+  });
+});
+
+describe('let func = lazy((f) => { if (f.a && f.b) { c = f.a + f.b } })', function () {
+  it('should add two numbers', function () {
+
+    // 1. ARRANGE
+    let a = 1;
+    let b = 2;
+    let c;
+
+    // 2. ACT
+    let func = lazy((f) => {
+      if (f.a && f.b) { 
+        c = f.a + f.b 
+      }
+    });
+
+    func.a = a;
+    func.b = b;
 
     // 3. ASSERT
     expect(c).to.be.equal(3);
