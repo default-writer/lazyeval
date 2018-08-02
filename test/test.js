@@ -18,12 +18,12 @@ describe('let func = lazy((func) => c = func.a + func.b)', function () {
     // 1. ARRANGE
     let a = 1;
     let b = 2;
+    let c;
 
     // 2. ACT
     let func = lazy((func) => c = func.a + func.b);
     func.a = a;
     func.b = b;
-    var c;
 
     // 3. ASSERT
     expect(c).to.be.equal(3);
@@ -36,12 +36,12 @@ describe('let func = lazy(() => c = func.a + func.b)', function () {
     // 1. ARRANGE
     let a = 1;
     let b = 2;
+    let c;
 
     // 2. ACT
     let func = lazy(() => c = func.a + func.b);
     func.a = a;
     func.b = b;
-    var c;
 
     // 3. ASSERT
     expect(c).to.be.equal(3);
@@ -54,11 +54,11 @@ describe('let func = lazy(() => c = a + func.b)', function () {
     // 1. ARRANGE
     let a = 1;
     let b = 2;
+    let c;
 
     // 2. ACT
     let func = lazy(() => c = a + func.b);
     func.b = b;
-    var c;
 
     // 3. ASSERT
     expect(c).to.be.equal(3);
@@ -71,6 +71,7 @@ describe('let func = lazy(() => c = a + func.c)', function () {
     // 1. ARRANGE
     let a = 1;
     let b = 2;
+    let c;
 
     // 2. ACT
     let func = lazy(() => c = a + func.c);
@@ -83,7 +84,6 @@ describe('let func = lazy(() => c = a + func.c)', function () {
       }
     })
     func.c = 2;
-    var c;
 
     // 3. ASSERT
     expect(c).to.be.equal(3);
