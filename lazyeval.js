@@ -4,3 +4,5 @@ let lazy = (eval) => ((data) => new Proxy(data, {
         eval(obj);
     }
 }))({});
+
+module.exports = lazy;
