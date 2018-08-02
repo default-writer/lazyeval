@@ -30,6 +30,24 @@ describe('let func = lazy((func) => c = func.a + func.b)', function () {
   });
 });
 
+describe('let func = lazy(() => c = func.a + func.b)', function () {
+  it('should add two numbers', function () {
+
+    // 1. ARRANGE
+    let a = 1;
+    let b = 2;
+
+    // 2. ACT
+    let func = lazy(() => c = func.a + func.b);
+    func.a = a;
+    func.b = b;
+    var c;
+
+    // 3. ASSERT
+    expect(c).to.be.equal(3);
+  });
+});
+
 describe('let func = lazy(() => c = a + func.b)', function () {
   it('should add two numbers', function () {
 
