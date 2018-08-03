@@ -1,7 +1,7 @@
-let lazy_require = (requres) => (eval) =>  ((data) => new Proxy(data, {
+let lazy_require = (requre) => (eval) =>  ((data) => new Proxy(data, {
     set(obj, key, val) {
         obj[key] = val;
-        if (requres(obj)) {
+        if (requre(obj)) {
             eval(obj);
         }
     }
