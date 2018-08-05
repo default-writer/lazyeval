@@ -12,6 +12,8 @@ let lazy = (eval) => ((data) => new Proxy(data, {
 
 https://github.com/hack2root/lazyeval
 
+[![install size](https://packagephobia.now.sh/badge?p=@root_admin/lazyeval@1.0.1)](https://packagephobia.now.sh/result?p=@root_admin/lazyeval@1.0.1)
+
 ## Example
 
 - func is a proxy for an empty objct {}

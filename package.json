@@ -1,6 +1,6 @@
 {
-  "name": "tests",
-  "version": "1.0.0",
+  "name": "@root_admin/lazyeval",
+  "version": "1.0.1",
   "description": "JavaScript DI framework tests",
   "main": "test.js",
   "directories": {
