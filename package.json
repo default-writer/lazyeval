@@ -1,8 +1,8 @@
 {
-  "name": "@root_admin/lazyeval",
+  "name": "get_sum_of_n",
   "version": "1.0.1",
-  "description": "JavaScript DI framework tests",
-  "main": "test.js",
+  "description": "JavaScript get sum of N",
+  "main": "test_get_sum_of_n.js",
   "directories": {
     "test": "test"
   },
@@ -13,19 +13,5 @@
   "scripts": {
     "test": "mocha"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/hack2root/lazyeval.git"
-  },
-  "keywords": [
-    "javascript",
-    "lazy",
-    "evaluation"
-  ],
-  "author": "Artur Mustafin",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/hack2root/lazyeval/issues"
-  },
-  "homepage": "https://github.com/hack2root/lazyeval#readme"
+  "license": "MIT"
 }
